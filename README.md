@@ -5,7 +5,7 @@
 Next, React, TypeScript, Styled Components, Hooks, Context API, HTML5, CSS3, WebPack
 ```
 ## Инструкции по развертыванию:
-    * выкачать репозиторий: git clone <url> 
+    * выкачать репозиторий: git clone https://github.com/TheVirtualFox/ozeex.git
     * перейти в папку проекта: cd ozeex
     * установить зависимости: npm i
     * установить глобально json-server он будет эмулировать api сервер: npm i -g json-server
