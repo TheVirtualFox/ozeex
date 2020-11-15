@@ -49,3 +49,7 @@ placeholder. В слайдере грузится только первая ка
 
 ![alt text](screens/lighthouse_desktop.png)
 ![alt text](screens/lighthouse_mobile.png)
+
+## Ветки
+Не знаю нужно ли грузить картинки на сервере или можно только плейсхолдеры
+в ветке load_images_on_server грузятся картинки на сервере
