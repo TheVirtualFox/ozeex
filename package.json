@@ -1,0 +1,28 @@
+{
+  "name": "ozeex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "concurrently \"npm run dev\" \"npm run api\"",
+    "api": "json-server -w ./database/result.json -p 4500"
+  },
+  "dependencies": {
+    "@webcomponents/shadydom": "^1.8.0",
+    "dotenv": "^8.2.0",
+    "next": "10.0.1",
+    "nextjs-progressbar": "0.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/styled-components": "^5.1.4",
+    "concurrently": "^5.3.0",
+    "typescript": "^4.0.5"
+  }
+}
