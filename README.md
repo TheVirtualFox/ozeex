@@ -41,7 +41,7 @@ placeholder. В слайдере грузится только первая ка
 ![alt text](screens/mobile.png)
 ![alt text](screens/mobile_pop_up.png)
 
-##Lighthouse
+## Lighthouse
 
 Параметр Largest Contentful Paint на mobile сильно зависит от размеров картинок,
 учитывая то, что сначала пользователю mobile грузится только 2 картинки. Может быть
