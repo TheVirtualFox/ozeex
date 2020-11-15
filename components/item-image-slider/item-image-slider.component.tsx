@@ -4,6 +4,7 @@ import {ResultPicture} from "../../models/result/ResultPicture";
 import {useContainerDimensions} from "../../hooks/use-resize.hook";
 import {LazyImage} from "../lazy-image/lazy-image.component";
 import {DeviceDetectorContext} from "../../contexts/device-detector.context";
+import {isServer} from "../../services/device-detector.service";
 
 interface ItemImageSliderProps {
     id: number,
@@ -58,7 +59,7 @@ export function ItemImageSlider({id, pictures, active, setIsSliderPlay}: ItemIma
                         <SliderPictureView onClick={clickHandler}>
                             <InnerPictureContainer ref={refInnerPictureContainer} style={{transform: `translateX(${-currentPictureIndex * widthInnerPictureContainer}px)`}}>
                                 {pictures.filter((item, index) => active || index === 0 || isImagesLoaded ).map(picture => {
-                                    if (isIe) {
+                                    if (isIe || isServer()) {
                                         return <ItemPicture key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="" />
                                     } else {
                                         return <LazyImage key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="" />
