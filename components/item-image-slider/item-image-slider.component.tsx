@@ -59,9 +59,9 @@ export function ItemImageSlider({id, pictures, active, setIsSliderPlay}: ItemIma
                             <InnerPictureContainer ref={refInnerPictureContainer} style={{transform: `translateX(${-currentPictureIndex * widthInnerPictureContainer}px)`}}>
                                 {pictures.filter((item, index) => active || index === 0 || isImagesLoaded ).map(picture => {
                                     if (isIe) {
-                                        return <ItemPicture key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="" />
+                                        return <ItemPicture key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="slider image" />
                                     } else {
-                                        return <LazyImage key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="" />
+                                        return <LazyImage key={picture.id + picture.path} src={`https://picsum.photos/320/180?cache=${picture.path}`} alt="slider image" />
                                     }
                                 })}
                             </InnerPictureContainer>
